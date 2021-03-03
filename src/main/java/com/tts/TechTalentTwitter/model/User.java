@@ -81,21 +81,21 @@ public class User {
   // this.email = email;
   // }
 
-  public String getUsername() {
-  return username;
-  }
+  //public String getUsername() {
+  // return username;
+  //}
 
   // public void setUsername(String username) {
   // this.username = username;
   // }
 
-  public String getPassword() {
-  return password;
-  }
-
-  public void setPassword(String password) {
-  this.password = password;
-  }
+//  public String getPassword() {
+//  return password;
+//  }
+//
+//  public void setPassword(String password) {
+//  this.password = password;
+//  }
 
   // public String getFirstName() {
   // return firstName;
@@ -117,9 +117,9 @@ public class User {
   // return active;
   // }
 
-  public void setActive(int active) {
-  this.active = active;
-  }
+//  public void setActive(int active) {
+//  this.active = active;
+//  }
 
   // public Date getCreatedAt() {
   // return createdAt;
@@ -133,17 +133,17 @@ public class User {
   // return roles;
   // }
 
-  public void setRoles(Set<Role> roles) {
-  this.roles = roles;
-  }
-
-  public List<User> getFollowers() {
-  return followers;
-  }
-
-  public void setFollowers(List<User> followers) {
-  this.followers = followers;
-  }
+//  public void setRoles(Set<Role> roles) {
+//  this.roles = roles;
+//  }
+//
+//  public List<User> getFollowers() {
+//  return followers;
+//  }
+//
+//  public void setFollowers(List<User> followers) {
+//  this.followers = followers;
+//  }
 
   // public List<User> getFollowing() {
   // return following;
