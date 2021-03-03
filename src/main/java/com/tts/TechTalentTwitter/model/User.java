@@ -137,13 +137,13 @@ public class User {
   this.roles = roles;
   }
 
-  // public List<User> getFollowers() {
-  // return followers;
-  // }
+  public List<User> getFollowers() {
+  return followers;
+  }
 
-  // public void setFollowers(List<User> followers) {
-  // this.followers = followers;
-  // }
+  public void setFollowers(List<User> followers) {
+  this.followers = followers;
+  }
 
   // public List<User> getFollowing() {
   // return following;
