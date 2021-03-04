@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
     <title id="title">Feed</title>
 
-    <div th:replace="/fragments/headlinks :: head-styles" ></div>
+    <div th:replace="fragments/headLink"></div>
 
 </head>
 <body>
@@ -16,7 +16,9 @@
     <div class="list-group" th:each="tweet:${tweetList}">
         <div class="list-group-item list-group-item-action">
             <div class="d-flex w-100 justify-content-between">
-                <a class="username" th:href="@{/users/} + ${tweet.user.username}">@<span th:text="${tweet.user.username}"></span></a><small> <span th:text="${#dates.format(tweet.createdAt, 'M/d/yy')}"></span></small>
+                <a class="username" th:href="@{/users/} + ${tweet.user.username}">@<span
+                        th:text="${tweet.user.username}"></span></a><small> <span
+                    th:text="${#dates.format(tweet.createdAt, 'M/d/yy')}"></span></small>
             </div>
             <p class="mb-1" th:utext="${tweet.message}"></p>
         </div>
@@ -25,5 +27,6 @@
         <h3>No tweets contain this hashtag</h3>
     </div>
 </div>
+<script th:replace="fragments/scripts"></script>
 </body>
 </html>
