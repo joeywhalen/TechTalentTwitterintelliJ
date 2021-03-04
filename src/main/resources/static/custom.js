@@ -8,10 +8,4 @@ $(document).ready(function() {
     $(this).removeClass('btn-danger');
     $(this).addClass('btn-primary');
   });
-})a.username {
-      color: #00aced
-  }
-
-  a.tag {
-      color: #0084b4
-  }
+  })
