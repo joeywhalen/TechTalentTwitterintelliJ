@@ -52,7 +52,7 @@ public class TweetService {
   }
 
   private void handleTags(Tweet tweet) {
-    List<Tag> tags = new ArrayList<>();
+    List<Tag> tags = new ArrayList<Tag>();
     Pattern pattern = Pattern.compile("#\\w+");
     Matcher matcher = pattern.matcher(tweet.getMessage());
     while (matcher.find()) {
@@ -103,7 +103,7 @@ public class TweetService {
     for (Tweet tweet : tweets) {
       String message = tweet.getMessage();
       Matcher matcher = pattern.matcher(message);
-      Set<String> tags = new HashSet<>();
+      Set<String> tags = new HashSet<String>();
       while (matcher.find()) {
         tags.add(matcher.group());
       }
