@@ -30,8 +30,8 @@ public class TweetController {
   @Autowired
   private TagRepository tagRepository;
 
-  @GetMapping(value = { "/tweets", "/" })
-  public String getFeed(@RequestParam(value = "filter", required = false) String filter, Model model){
+  @GetMapping(value = {"/tweets", "/"})
+  public String getFeed(@RequestParam(value = "filter", required = false) String filter, Model model) {
     User loggedInUser = userService.getLoggedInUser();
     List<TweetDisplay> tweets = new ArrayList<>();
 
@@ -42,8 +42,7 @@ public class TweetController {
       List<User> following = loggedInUser.getFollowing();
       tweets = tweetService.findAllByUsers(following);
       model.addAttribute("filter", "following");
-    }
-    else {
+    } else {
       tweets = tweetService.findAll();
       model.addAttribute("filter", "all");
     }
@@ -71,7 +70,7 @@ public class TweetController {
   }
 
   @GetMapping(value = "/tweets/{tag}")
-  public String getTweetsByTag(@PathVariable(value="tag") String tag, Model model) {
+  public String getTweetsByTag(@PathVariable(value = "tag") String tag, Model model) {
     List<TweetDisplay> tweets = tweetService.findAllWithTag(tag);
     model.addAttribute("tweetList", tweets);
     model.addAttribute("tag", tag);
