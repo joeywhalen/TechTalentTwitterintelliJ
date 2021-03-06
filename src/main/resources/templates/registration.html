@@ -9,9 +9,8 @@
 <body>
 <div class="container">
     <div th:replace="fragments/navbar"></div>
-    <h2>Sign up</h2>
-    <form th:action="@{/signup}" th:object="${user}" method="post"
-          autocomplete="off">
+    <form th:unless="${success}" th:action="@{/signup}" th:object="${user}" method="post"
+          autocomplete="off"><h2>Sign up</h2>
         <div class="form-group">
             <label th:if="${#fields.hasErrors('firstName')}"
                    th:errors="*{firstName}" class="validation-message"></label> <input
@@ -47,7 +46,7 @@
                     value="Submit" type="Submit" th:text="Submit"></button>
         </div>
     </form>
-    <form th:action="@{/login}" method="get">
+    <form th:if="${success}" th:action="@{/login}" method="get"><h2>Sign up successful!</h2>
         <button class="btn btn-md btn-success btn-block" name="Submit"
                 value="Login" type="Submit">Log in
         </button>
